@@ -44,7 +44,7 @@ npm run dev
 const HomePage = () => {
   return (
     <div>
-      <h1 className='text-7xl'>HomePage</h1>
+      <h1 className="text-7xl">HomePage</h1>
     </div>
   );
 };
@@ -64,7 +64,7 @@ app/about/page.js
 const AboutPage = () => {
   return (
     <div>
-      <h1 className='text-7xl'>AboutPage</h1>
+      <h1 className="text-7xl">AboutPage</h1>
     </div>
   );
 };
@@ -83,8 +83,8 @@ import Link from 'next/link';
 const HomePage = () => {
   return (
     <div>
-      <h1 className='text-7xl'>HomePage</h1>
-      <Link href='/about' className='text-2xl'>
+      <h1 className="text-7xl">HomePage</h1>
+      <Link href="/about" className="text-2xl">
         about page
       </Link>
     </div>
@@ -100,7 +100,7 @@ export default HomePage;
 
 ```js
 const AboutInfoPage = () => {
-  return <h1 className='text-7xl'>AboutInfoPage</h1>;
+  return <h1 className="text-7xl">AboutInfoPage</h1>;
 };
 export default AboutInfoPage;
 ```
@@ -159,7 +159,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );
@@ -192,18 +192,18 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className='bg-base-300 py-4'>
-      <div className='navbar px-8 max-w-6xl mx-auto flex-col sm:flex-row'>
+    <nav className="bg-base-300 py-4">
+      <div className="navbar px-8 max-w-6xl mx-auto flex-col sm:flex-row">
         <li>
-          <Link href='/' className='btn btn-primary'>
+          <Link href="/" className="btn btn-primary">
             Next.js
           </Link>
         </li>
-        <ul className='menu menu-horizontal md:ml-8'>
+        <ul className="menu menu-horizontal md:ml-8">
           {links.map((link) => {
             return (
               <li key={link.href}>
-                <Link href={link.href} className=' capitalize'>
+                <Link href={link.href} className=" capitalize">
                   {link.label}
                 </Link>
               </li>
@@ -236,10 +236,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className='bg-base-200'>
+    <html lang="en" className="bg-base-200">
       <body className={inter.className}>
         <Navbar />
-        <main className='px-8 py-20 max-w-6xl mx-auto '>{children}</main>
+        <main className="px-8 py-20 max-w-6xl mx-auto ">{children}</main>
       </body>
     </html>
   );
@@ -291,8 +291,8 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div>
-      <h1 className='text-5xl mb-8 font-bold'>Next.js Tutorial</h1>
-      <Link href='/client' className='btn btn-accent'>
+      <h1 className="text-5xl mb-8 font-bold">Next.js Tutorial</h1>
+      <Link href="/client" className="btn btn-accent">
         get started
       </Link>
     </div>
@@ -310,8 +310,8 @@ const Client = () => {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <h1 className='text-7xl font-bold mb-4 '>{count}</h1>
-      <button className='btn btn-primary' onClick={() => setCount(count + 1)}>
+      <h1 className="text-7xl font-bold mb-4 ">{count}</h1>
+      <button className="btn btn-primary" onClick={() => setCount(count + 1)}>
         increase
       </button>
     </div>
@@ -335,7 +335,7 @@ const ServerComponent = async () => {
   console.log(data);
   return (
     <div>
-      <h1 className='text-7xl'>DrinksPage</h1>
+      <h1 className="text-7xl">DrinksPage</h1>
     </div>
   );
 };
@@ -359,7 +359,7 @@ const DrinksPage = async () => {
   console.log(data);
   return (
     <div>
-      <h1 className='text-7xl'>DrinksPage</h1>
+      <h1 className="text-7xl">DrinksPage</h1>
     </div>
   );
 };
@@ -374,7 +374,7 @@ The special file loading.js helps you create meaningful Loading UI with React Su
 
 ```js
 const loading = () => {
-  return <span className='loading'></span>;
+  return <span className="loading"></span>;
 };
 export default loading;
 ```
@@ -395,7 +395,7 @@ const DrinksPage = async () => {
   console.log(data);
   return (
     <div>
-      <h1 className='text-7xl'>DrinksPage</h1>
+      <h1 className="text-7xl">DrinksPage</h1>
     </div>
   );
 };
@@ -451,9 +451,9 @@ const fetchDrinks = async () => {
 ```js
 export default function DrinksLayout({ children }) {
   return (
-    <div className='max-w-xl '>
-      <div className='mockup-code mb-8'>
-        <pre data-prefix='$'>
+    <div className="max-w-xl ">
+      <div className="mockup-code mb-8">
+        <pre data-prefix="$">
           <code>npx create-next-app@14 nextjs-tutorial</code>
         </pre>
       </div>
@@ -473,7 +473,7 @@ const page = ({ params }) => {
 
   return (
     <div>
-      <h1 className='text-7xl'>{params.id}</h1>
+      <h1 className="text-7xl">{params.id}</h1>
     </div>
   );
 };
@@ -498,13 +498,10 @@ import Link from 'next/link';
 
 const DrinksList = ({ drinks }) => {
   return (
-    <ul className='menu menu-vertical pl-0'>
+    <ul className="menu menu-vertical pl-0">
       {drinks.map((drink) => (
         <li key={drink.idDrink}>
-          <Link
-            href={`/drinks/${drink.idDrink}`}
-            className='text-xl font-medium'
-          >
+          <Link href={`/drinks/${drink.idDrink}`} className="text-xl font-medium">
             {drink.strDrink}
           </Link>
         </li>
@@ -576,10 +573,10 @@ const SingleDrink = async ({ params }) => {
   const imgSrc = data?.drinks[0]?.strDrinkThumb;
   return (
     <div>
-      <Link href='/drinks' className='btn btn-primary mt-8 mb-12'>
+      <Link href="/drinks" className="btn btn-primary mt-8 mb-12">
         back to drinks
       </Link>
-      <h1 className='text-4xl mb-8'>{title}</h1>
+      <h1 className="text-4xl mb-8">{title}</h1>
     </div>
   );
 };
@@ -613,12 +610,12 @@ const SingleDrink = async ({ params }) => {
   const imgSrc = data?.drinks[0]?.strDrinkThumb;
   return (
     <div>
-      <Link href='/drinks' className='btn btn-primary mt-8 mb-12'>
+      <Link href="/drinks" className="btn btn-primary mt-8 mb-12">
         back to drinks
       </Link>
       {/* <img src={imgSrc} alt='' /> */}
-      <Image src={drinkImg} className='w-48 h-48 rounded' alt='' />
-      <h1 className='text-4xl mb-8'>{title}</h1>
+      <Image src={drinkImg} className="w-48 h-48 rounded" alt="" />
+      <h1 className="text-4xl mb-8">{title}</h1>
     </div>
   );
 };
@@ -646,20 +643,13 @@ const SingleDrink = async ({ params }) => {
   const imgSrc = data?.drinks[0]?.strDrinkThumb;
   return (
     <div>
-      <Link href='/drinks' className='btn btn-primary mt-8 mb-12'>
+      <Link href="/drinks" className="btn btn-primary mt-8 mb-12">
         back to drinks
       </Link>
       {/* <img src={imgSrc} alt='' /> */}
       {/* <Image src={drinkImg} className='w-48 h-48 rounded' alt='' /> */}
-      <Image
-        src={imgSrc}
-        width={300}
-        height={300}
-        className='w-48 h-48 rounded shadow-lg mb-4'
-        priority
-        alt=''
-      />
-      <h1 className='text-4xl mb-8'>{title}</h1>
+      <Image src={imgSrc} width={300} height={300} className="w-48 h-48 rounded shadow-lg mb-4" priority alt="" />
+      <h1 className="text-4xl mb-8">{title}</h1>
     </div>
   );
 };
@@ -697,21 +687,12 @@ import Link from 'next/link';
 
 const DrinksList = ({ drinks }) => {
   return (
-    <ul className='grid sm:grid-cols-2 gap-6 mt-6'>
+    <ul className="grid sm:grid-cols-2 gap-6 mt-6">
       {drinks.map((drink) => (
         <li key={drink.idDrink}>
-          <Link
-            href={`/drinks/${drink.idDrink}`}
-            className='text-xl font-medium'
-          >
-            <div className='relative h-48 mb-4'>
-              <Image
-                src={drink.strDrinkThumb}
-                fill
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw'
-                alt={drink.strDrink}
-                className='rounded-md object-cover'
-              />
+          <Link href={`/drinks/${drink.idDrink}`} className="text-xl font-medium">
+            <div className="relative h-48 mb-4">
+              <Image src={drink.strDrinkThumb} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw" alt={drink.strDrink} className="rounded-md object-cover" />
             </div>
             {drink.strDrink}
           </Link>
@@ -889,10 +870,10 @@ const Prisma = async () => {
   const tasks = await prismaHandlers();
   return (
     <div>
-      <h1 className='text-3xl font-medium mb-4'>Prisma Example </h1>
+      <h1 className="text-3xl font-medium mb-4">Prisma Example </h1>
       {tasks.map((task) => {
         return (
-          <h2 key={task.id} className='text-xl py-2'>
+          <h2 key={task.id} className="text-xl py-2">
             😬 {task.content}
           </h2>
         );
@@ -997,7 +978,7 @@ import TaskList from '@/components/TaskList';
 
 const TasksPage = () => {
   return (
-    <div className='max-w-lg'>
+    <div className="max-w-lg">
       <TaskForm />
       <TaskList />
     </div>
@@ -1019,24 +1000,14 @@ const TaskList = async () => {
       createdAt: 'desc',
     },
   });
-  if (tasks.length === 0)
-    return <h2 className='mt-8 font-medium text-lg'>No tasks to show</h2>;
+  if (tasks.length === 0) return <h2 className="mt-8 font-medium text-lg">No tasks to show</h2>;
   return (
-    <ul className='mt-8'>
+    <ul className="mt-8">
       {tasks.map((task) => (
-        <li
-          key={task.id}
-          className='flex justify-between items-center px-6 py-4 mb-4 border border-base-300 rounded-lg shadow-lg'
-        >
-          <h2
-            className={`text-lg capitalize ${
-              task.completed ? 'line-through' : null
-            }`}
-          >
-            {task.content}
-          </h2>
-          <div className='flex gap-6 items-center'>
-            <Link href={`/tasks/${task.id}`} className='btn btn-accent btn-xs'>
+        <li key={task.id} className="flex justify-between items-center px-6 py-4 mb-4 border border-base-300 rounded-lg shadow-lg">
+          <h2 className={`text-lg capitalize ${task.completed ? 'line-through' : null}`}>{task.content}</h2>
+          <div className="flex gap-6 items-center">
+            <Link href={`/tasks/${task.id}`} className="btn btn-accent btn-xs">
               edit
             </Link>
             <DeleteForm id={task.id} />
@@ -1102,7 +1073,7 @@ import { myAction } from './actions';
 export default function ClientComponent() {
   return (
     <form action={myAction}>
-      <button type='submit'>Add to Cart</button>
+      <button type="submit">Add to Cart</button>
     </form>
   );
 }
@@ -1131,15 +1102,9 @@ const createTask = async (formData) => {
 const TaskForm = () => {
   return (
     <form action={createTask}>
-      <div className='join w-full'>
-        <input
-          className='input input-bordered join-item w-full'
-          placeholder='Type Here'
-          type='text'
-          name='content'
-          required
-        />
-        <button type='submit' className='btn join-item btn-primary'>
+      <div className="join w-full">
+        <input className="input input-bordered join-item w-full" placeholder="Type Here" type="text" name="content" required />
+        <button type="submit" className="btn join-item btn-primary">
           create task
         </button>
       </div>
@@ -1194,8 +1159,8 @@ import { deleteTask } from '@/utils/actions';
 const DeleteForm = ({ id }) => {
   return (
     <form action={deleteTask}>
-      <input type='hidden' name='id' value={id} />
-      <button className='btn btn-error btn-xs'>delete</button>
+      <input type="hidden" name="id" value={id} />
+      <button className="btn btn-error btn-xs">delete</button>
     </form>
   );
 };
@@ -1235,8 +1200,8 @@ const TaskPage = async ({ params }) => {
 
   return (
     <>
-      <div className='mb-16'>
-        <Link href='/tasks' className='btn btn-accent'>
+      <div className="mb-16">
+        <Link href="/tasks" className="btn btn-accent">
           Back to Tasks
         </Link>
       </div>
@@ -1287,34 +1252,20 @@ import { editTask } from '@/utils/actions';
 const EditForm = ({ task }) => {
   const { id, completed, content } = task;
   return (
-    <form
-      action={editTask}
-      className='max-w-sm bg-base-100 p-12 border border-base-300  rounded-lg'
-    >
-      <input type='hidden' name='id' value={id} />
+    <form action={editTask} className="max-w-sm bg-base-100 p-12 border border-base-300  rounded-lg">
+      <input type="hidden" name="id" value={id} />
       {/* content */}
 
-      <input
-        type='text'
-        required
-        defaultValue={content}
-        name='content'
-        className='input input-bordered w-full'
-      />
+      <input type="text" required defaultValue={content} name="content" className="input input-bordered w-full" />
 
       {/* completed */}
-      <div className='form-control my-4'>
-        <label className='label cursor-pointer'>
-          <span className='label-text'>Completed</span>
-          <input
-            type='checkbox'
-            defaultChecked={completed}
-            name='completed'
-            className='checkbox checkbox-primary checkbox-sm'
-          />
+      <div className="form-control my-4">
+        <label className="label cursor-pointer">
+          <span className="label-text">Completed</span>
+          <input type="checkbox" defaultChecked={completed} name="completed" className="checkbox checkbox-primary checkbox-sm" />
         </label>
       </div>
-      <button className='btn btn-primary btn-block btn-sm'>edit</button>
+      <button className="btn btn-primary btn-block btn-sm">edit</button>
     </form>
   );
 };
@@ -1345,11 +1296,7 @@ const SubmitButton = () => {
   const { pending } = useFormStatus();
 
   return (
-    <button
-      type='submit'
-      className='btn join-item btn-primary'
-      disabled={pending}
-    >
+    <button type="submit" className="btn join-item btn-primary" disabled={pending}>
       {pending ? 'please wait... ' : 'create task'}
     </button>
   );
@@ -1358,14 +1305,8 @@ const SubmitButton = () => {
 const TaskForm = () => {
   return (
     <form action={createTaskCustom}>
-      <div className='join w-full'>
-        <input
-          className='input input-bordered join-item w-full'
-          placeholder='Type Here'
-          type='text'
-          name='content'
-          required
-        />
+      <div className="join w-full">
+        <input className="input input-bordered join-item w-full" placeholder="Type Here" type="text" name="content" required />
         <SubmitButton />
       </div>
     </form>
@@ -1406,11 +1347,7 @@ const SubmitButton = () => {
   const { pending } = useFormStatus();
 
   return (
-    <button
-      type='submit'
-      className='btn join-item btn-primary'
-      disabled={pending}
-    >
+    <button type="submit" className="btn join-item btn-primary" disabled={pending}>
       {pending ? 'please wait... ' : 'create task'}
     </button>
   );
@@ -1425,15 +1362,9 @@ const TaskForm = () => {
 
   return (
     <form action={formAction}>
-      {state.message ? <p className='mb-2'>{state.message}</p> : null}
-      <div className='join w-full'>
-        <input
-          className='input input-bordered join-item w-full'
-          placeholder='Type Here'
-          type='text'
-          name='content'
-          required
-        />
+      {state.message ? <p className="mb-2">{state.message}</p> : null}
+      <div className="join w-full">
+        <input className="input input-bordered join-item w-full" placeholder="Type Here" type="text" name="content" required />
         <SubmitButton />
       </div>
     </form>
@@ -1545,10 +1476,10 @@ import Providers from './providers';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main className='px-8 py-20 max-w-6xl mx-auto'>
+        <main className="px-8 py-20 max-w-6xl mx-auto">
           <Providers>{children}</Providers>
         </main>
       </body>
@@ -1582,11 +1513,7 @@ import toast from 'react-hot-toast';
 const SubmitBtn = () => {
   const { pending } = useFormStatus();
   return (
-    <button
-      type='submit'
-      className='btn btn-primary join-item'
-      disabled={pending}
-    >
+    <button type="submit" className="btn btn-primary join-item" disabled={pending}>
       {pending ? 'please wait...' : 'create task'}
     </button>
   );
@@ -1611,14 +1538,8 @@ const TaskForm = () => {
 
   return (
     <form action={formAction}>
-      <div className='join w-full'>
-        <input
-          type='text '
-          className='input input-bordered join-item w-full'
-          placeholder='type here'
-          name='content'
-          required
-        />
+      <div className="join w-full">
+        <input type="text " className="input input-bordered join-item w-full" placeholder="type here" name="content" required />
         <SubmitBtn />
       </div>
     </form>
@@ -1639,7 +1560,7 @@ import { deleteTask } from '@/utils/actions';
 const SubmitBtn = () => {
   const { pending } = useFormStatus();
   return (
-    <button type='submit' className='btn btn-xs btn-error' disabled={pending}>
+    <button type="submit" className="btn btn-xs btn-error" disabled={pending}>
       {pending ? 'pending...' : 'delete'}
     </button>
   );
@@ -1648,7 +1569,7 @@ const SubmitBtn = () => {
 const DeleteForm = ({ id }) => {
   return (
     <form action={deleteTask}>
-      <input type='hidden' name='id' value={id} />
+      <input type="hidden" name="id" value={id} />
       <SubmitBtn />
     </form>
   );
@@ -1776,15 +1697,15 @@ const prismaHandlers = async () => {
 const PrismaExample = async () => {
   const tasks = await prismaHandlers();
   if (tasks.length === 0) {
-    return <h2 className='mt-8 font-medium text-lg'>No tasks to show...</h2>;
+    return <h2 className="mt-8 font-medium text-lg">No tasks to show...</h2>;
   }
 
   return (
     <div>
-      <h1 className='text-7xl'>PrismaExample</h1>
+      <h1 className="text-7xl">PrismaExample</h1>
       {tasks.map((task) => {
         return (
-          <h2 key={task.id} className='text-xl py-2'>
+          <h2 key={task.id} className="text-xl py-2">
             😬 {task.content}
           </h2>
         );

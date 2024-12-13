@@ -2,4 +2,11 @@
 
 💥💥💥 💥💥💥 💥💥💥 NEXTJS TUTORIAL💥💥💥 💥💥💥 💥💥💥 
 
-💥 sECTION 1 - Next.js tutorial
+💥 SECTION 1 - Next.js tutorial
+    - routing 
+        w foldrze app tworzymy folder z nazwą route np 'about'. W folderze umieszczamy page.js z zwracanym komponentem.
+        Po wejściu na http://localhost:3000/about zobaczymy komponent z /about/page.js
+    - nested routes
+    - DaisyUI to biblioteka komponentów tailwind css
+    - layout.js nie odświeża się podczas zmiany route, natomiast templateLayout odświeża się
+    - komponenty w nextjs dzielimy na server components oraz client components. W default domyślne komponenty to server components

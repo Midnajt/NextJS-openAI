@@ -10,3 +10,10 @@
     - DaisyUI to biblioteka komponentów tailwind css
     - layout.js nie odświeża się podczas zmiany route, natomiast templateLayout odświeża się
     - komponenty w nextjs dzielimy na server components oraz client components. W default domyślne komponenty to server components
+    - asynchroniczny komponent można stworzyć tylko po stronie serwera
+    - next posiada wbudowaną bibliotekę do obsługiwania i optymalizowania statycznych obrazów
+    {
+        import Image from 'next/image';
+        import drinkImg from './drink.jpg';
+        <Image src={drinkImg} className="w-48 h-48 rounded-lg" alt="a drink"></Image>
+    }

@@ -13,7 +13,8 @@ const getSingleDrink = async (id) => {
 };
 
 const SingleDrinkPage = async ({ params }) => {
-  const data = await getSingleDrink(params.id);
+  const { id } = await params;
+  const data = await getSingleDrink(id);
   const title = data?.drinks[0]?.strDrink;
   const imgSrc = data?.drinks[0]?.strDrinkThumb;
 
